@@ -12,16 +12,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#2f4154">
+  <meta name="theme-color" content="#bbe8e8">
   <meta name="author" content="XieHongchen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="DOM  BOMjs组成ECMAScript（JavaScript语句） DOM（页面文档对象模型） BOM（浏览器对象模型） APIAPI是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而有无需访问源码，或理解内部工作机制的细节。 简单理解：API是给程序员提供的一种工具，以便能更轻松的实现想要完成的功能。 Web APIWeb API是浏览器提供的一套">
+    <meta name="description" content="dom&amp;bom学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="dom-bom">
 <meta property="og:url" content="https://xiehongchen.github.io/2023/03/22/dom&bom/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="DOM  BOMjs组成ECMAScript（JavaScript语句） DOM（页面文档对象模型） BOM（浏览器对象模型） APIAPI是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而有无需访问源码，或理解内部工作机制的细节。 简单理解：API是给程序员提供的一种工具，以便能更轻松的实现想要完成的功能。 Web APIWeb API是浏览器提供的一套">
+<meta property="og:description" content="dom&amp;bom学习笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xiehongchen.github.io/img/dom-bom/dom.png">
 <meta property="og:image" content="https://xiehongchen.github.io/img/dom-bom/mouse.png">
@@ -39,12 +39,14 @@
 <meta property="og:image" content="https://xiehongchen.github.io/img/dom-bom/jizhi.png">
 <meta property="og:image" content="https://xiehongchen.github.io/img/dom-bom/zhixing.png">
 <meta property="article:published_time" content="2023-03-22T06:36:16.000Z">
-<meta property="article:modified_time" content="2023-03-22T06:36:51.809Z">
+<meta property="article:modified_time" content="2023-03-22T07:48:08.104Z">
 <meta property="article:author" content="XieHongchen">
 <meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://xiehongchen.github.io/img/dom-bom/dom.png">
   
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>dom-bom - Hexo</title>
@@ -85,7 +87,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"xiehongchen.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"xiehongchen.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -207,7 +209,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/preview.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -220,6 +222,11 @@
         
           
   <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        XieHongchen
+      </span>
     
     
       <span class="post-meta">
@@ -254,6 +261,14 @@
 
     
     
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
   </div>
 
 
@@ -277,6 +292,19 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
 
     </div>
 
@@ -1257,19 +1285,6 @@
 
     <div class="side-col d-none d-lg-block col-lg-2">
       
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
 
     </div>
   </div>
@@ -1491,6 +1506,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
