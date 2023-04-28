@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>36进制求和</title>
+    <link href="/2023/04/28/36%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C/"/>
+    <url>/2023/04/28/36%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C/</url>
+    
+    <content type="html"><![CDATA[<h1 id="36进制求和"><a href="#36进制求和" class="headerlink" title="36进制求和"></a>36进制求和</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">function</span> <span class="hljs-title function_">Test36Bin</span>(<span class="hljs-params">s, t</span>) &#123;<br>    <span class="hljs-keyword">let</span> chars = <span class="hljs-string">&#x27;0123456789abcdefghijklmnopqrstuvwxyz&#x27;</span>;<br>    <span class="hljs-keyword">let</span> carry = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">let</span> result = <span class="hljs-string">&#x27;&#x27;</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = s.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>, j = t.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>; s[i] || t[j]; --i, --j) &#123;<br>        <span class="hljs-keyword">let</span> sum = carry + (s[i] ? chars.<span class="hljs-title function_">indexOf</span>(s[i]) : <span class="hljs-number">0</span>) + (t[j] ? chars.<span class="hljs-title function_">indexOf</span>(t[j]) : <span class="hljs-number">0</span>);<br>        carry = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(sum / <span class="hljs-number">36</span>)<br>        <span class="hljs-keyword">let</span> r = sum % <span class="hljs-number">36</span>;<br>        result += chars[r];<br>    &#125;<br>    <span class="hljs-keyword">if</span> (carry) &#123;<br>        result += <span class="hljs-string">&#x27;1&#x27;</span><br>    &#125;<br>    <span class="hljs-keyword">return</span> result.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;&#x27;</span>).<span class="hljs-title function_">reverse</span>().<span class="hljs-title function_">join</span>(<span class="hljs-string">&#x27;&#x27;</span>);<br>&#125;<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title class_">Test36Bin</span>(<span class="hljs-string">&#x27;zzzy&#x27;</span>, <span class="hljs-string">&#x27;zz&#x27;</span>)); <br></code></pre></td></tr></table></figure><blockquote><p>讲解</p><ol><li>获取36进制的所有字符</li><li>从后往前遍历两个字符串，如果有一个字符串遍历完了，就用0代替</li><li>求和，如果有进位，就加到下一次求和中</li><li>求和后，如果大于36，就取整，然后求余，余数就是当前位的值</li><li>如果有进位，就在最后加1</li><li>最后把结果反转，就是最终结果</li><li>36进制的最大值是zzzz，所以最大值是1295，所以不会超过1295</li><li>36进制的最小值是0，所以最小值是0，所以不会小于0</li></ol></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>面试题</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>js</tag>
+      
+      <tag>前端</tag>
+      
+      <tag>进制</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>typescript</title>
     <link href="/2023/04/22/typescript-1/"/>
     <url>/2023/04/22/typescript-1/</url>
