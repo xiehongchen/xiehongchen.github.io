@@ -1,0 +1,716 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#bbe8e8">
+  <meta name="author" content="XieHongchen">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="hexo的使用方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用方法">
+<meta property="og:url" content="https://xiehongchen.github.io/2023/05/14/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="hexo的使用方法">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-14T09:43:02.000Z">
+<meta property="article:modified_time" content="2023-05-14T12:17:40.259Z">
+<meta property="article:author" content="XieHongchen">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>使用方法 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"xiehongchen.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/preview.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="使用方法"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        XieHongchen
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-05-14 17:43" pubdate>
+          2023年5月14日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          20 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">使用方法</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="1、安装hexo-cli"><a href="#1、安装hexo-cli" class="headerlink" title="1、安装hexo -cli"></a>1、安装hexo -cli</h2><p>使用npm或yarn安装hexo的脚手架工具hexo-cli</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
+<h2 id="2、初始化项目"><a href="#2、初始化项目" class="headerlink" title="2、初始化项目"></a>2、初始化项目</h2><p>安装完成后，使用hexo命令初始化项目，后面为文件名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo init myBlog<br></code></pre></td></tr></table></figure>
+<h2 id="3、安装依赖"><a href="#3、安装依赖" class="headerlink" title="3、安装依赖"></a>3、安装依赖</h2><p>进入项目目录，安装依赖</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd myBlog<br>npm install<br></code></pre></td></tr></table></figure>
+<h2 id="4、启动项目"><a href="#4、启动项目" class="headerlink" title="4、启动项目"></a>4、启动项目</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo server<br></code></pre></td></tr></table></figure>
+<p>简写</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo s<br></code></pre></td></tr></table></figure>
+<h2 id="5、访问项目"><a href="#5、访问项目" class="headerlink" title="5、访问项目"></a>5、访问项目</h2><p>在浏览器中输入<a target="_blank" rel="noopener" href="http://localhost:4000/%E5%8D%B3%E5%8F%AF%E8%AE%BF%E9%97%AE%E9%A1%B9%E7%9B%AE">http://localhost:4000/即可访问项目</a></p>
+<h1 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h1><h2 id="1、-config-yml"><a href="#1、-config-yml" class="headerlink" title="1、_config.yml"></a>1、_config.yml</h2><p>项目的配置文件，可以在这里配置项目的信息，例如标题、描述、作者、语言、主题等等</p>
+<h3 id="网站配置"><a href="#网站配置" class="headerlink" title="网站配置"></a>网站配置</h3><ul>
+<li>title：网站标题</li>
+<li>subtitle：副标题</li>
+<li>description：描述</li>
+<li>keywords：关键字</li>
+<li>author：作者</li>
+<li>language：语言</li>
+<li>timezone：时区<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">title:</span> <span class="hljs-string">Hexo</span><br><span class="hljs-attr">subtitle:</span> <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-attr">keywords:</span><br><span class="hljs-attr">author:</span> <span class="hljs-string">John</span> <span class="hljs-string">Doe</span><br><span class="hljs-attr">language:</span> <span class="hljs-string">en</span><br><span class="hljs-attr">timezone:</span> <span class="hljs-string">&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>
+可以修改成自己的<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">title:</span> <span class="hljs-string">Hexo</span><br><span class="hljs-attr">subtitle:</span> <span class="hljs-string">&#x27;主页&#x27;</span><br><span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-attr">keywords:</span><br><span class="hljs-attr">author:</span> <span class="hljs-string">XieHongchen</span><br><span class="hljs-attr">language:</span> <span class="hljs-string">zh-CN</span><br><span class="hljs-attr">timezone:</span> <span class="hljs-string">&#x27;Asia/Shanghai&#x27;</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="网址配置"><a href="#网址配置" class="headerlink" title="网址配置"></a>网址配置</h3><p>url是博客上线后的网址，会在分享等地方用到，一定要修改</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-string">url:http://example.com</span><br></code></pre></td></tr></table></figure>
+<p>可以修改成自己的，GitHub的地址</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">url:</span> <span class="hljs-string">https://xiehongchen.github.io</span><br></code></pre></td></tr></table></figure>
+<h2 id="2、scaffolds"><a href="#2、scaffolds" class="headerlink" title="2、scaffolds"></a>2、scaffolds</h2><ul>
+<li>draft.md</li>
+<li>FASTPANEL</li>
+<li>post.md<br>模板文件夹，里面存放了3个模板文件，依次为草稿模板，页面模板和文字模板<br>当我们使用hex名称生成草稿、页面或文字的时候，就是赋值这些模板</li>
+</ul>
+<p>我们以文章模板为例进行说明。默认post.md内容为空，头部信息如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> &#123;&#123; <span class="hljs-string">title</span> &#125;&#125;<br><span class="hljs-attr">date:</span> &#123;&#123; <span class="hljs-string">date</span> &#125;&#125;<br><span class="hljs-attr">tags:</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+<p>如果我们想所有新生成的文章都带上分类字段。我们可以修改post.md的头部。我们给头部添加了categories字段。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> &#123;&#123; <span class="hljs-string">title</span> &#125;&#125;<br><span class="hljs-attr">date:</span> &#123;&#123; <span class="hljs-string">date</span> &#125;&#125;<br><span class="hljs-attr">tags:</span><br><span class="hljs-attr">categories:</span> <br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+<p>这样我们使用 <code>hexo new a</code> 生成a.md文章的时候，a.md文章顶部都会带上categories字段。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">a</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2022-04-01 16:57:55</span><br><span class="hljs-attr">tags:</span><br><span class="hljs-attr">categories:</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+<h2 id="3、source"><a href="#3、source" class="headerlink" title="3、source"></a>3、source</h2><p>资源文件夹是存放用户资源的地方。除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 &#x2F; 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。<br>我们使用 <code>hexo new ……</code> 命令生成的页面或者文章，都会被放倒source文件夹下。</p>
+<h2 id="4、themes"><a href="#4、themes" class="headerlink" title="4、themes"></a>4、themes</h2><p>themes文件夹存放的就是hexo的主题。</p>
+<h2 id="5、Front-matter"><a href="#5、Front-matter" class="headerlink" title="5、Front-matter"></a>5、Front-matter</h2><p>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量，举例来说：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">旋转中的时差效果</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2023-04-28 21:09:11</span><br><span class="hljs-attr">tags:</span> [<span class="hljs-string">js</span>,<span class="hljs-string">前端</span>,<span class="hljs-string">css</span>]<br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>layout：布局</li>
+<li>title：标题</li>
+<li>date：建立时间</li>
+<li>updated：更新时间</li>
+<li>comment：开启文章的评论功能</li>
+<li>tags：标签（不适用于分页）</li>
+<li>categories：分类（不适用于分页）</li>
+<li>permalink：覆盖文章网址</li>
+<li>sticky：置顶，普通为1</li>
+</ul>
+<blockquote>
+<p>其中，分类和标签需要区别一下，分类具有顺序性和层次性，也就是说 Foo, Bar 不等于 Bar, Foo；而标签没有顺序和层次。</p>
+</blockquote>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs subunit">categories:<br>- Diary<br><span class="hljs-keyword">tags:</span><br>- PS3<br>- Games<br></code></pre></td></tr></table></figure>
+<h1 id="具体使用"><a href="#具体使用" class="headerlink" title="具体使用"></a>具体使用</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo new [layout] &lt;title&gt;<br></code></pre></td></tr></table></figure>
+<h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo new text<br></code></pre></td></tr></table></figure>
+<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo new page text<br></code></pre></td></tr></table></figure>
+<h2 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo new draft text<br></code></pre></td></tr></table></figure>
+<p>预览草稿</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo server --draft<br></code></pre></td></tr></table></figure>
+<p>将草稿发表到post中</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo publish draft text<br></code></pre></td></tr></table></figure>
+<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><ul>
+<li>新建<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo new a<br></code></pre></td></tr></table></figure>
+简写<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo n a<br></code></pre></td></tr></table></figure></li>
+<li>Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo serve<br></code></pre></td></tr></table></figure></li>
+<li>以静态模式启动<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo serve -s<br></code></pre></td></tr></table></figure></li>
+<li>更改访问端口 (默认端口为4000，’ctrl + c’关闭server)<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo serve -p 5000<br></code></pre></td></tr></table></figure></li>
+<li>自定义 IP<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo server -i ip地址<br></code></pre></td></tr></table></figure></li>
+<li>清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的public文件夹<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo clean<br></code></pre></td></tr></table></figure></li>
+<li>生成静态网页 (执行 $ hexo g后会在站点根目录下生成public文件夹, hexo会将”&#x2F;blog&#x2F;source&#x2F;“ 下面的.md后缀的文件编译为.html后缀的文件,存放在”&#x2F;blog&#x2F;public&#x2F; “ 路径下)<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo generate<br></code></pre></td></tr></table></figure>
+简写<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo g<br></code></pre></td></tr></table></figure></li>
+<li>初始化XX文件夹名称<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo init XX<br></code></pre></td></tr></table></figure></li>
+<li>升级<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm update hexo -g<br></code></pre></td></tr></table></figure></li>
+<li>安装<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm install hexo -g<br></code></pre></td></tr></table></figure></li>
+<li>查看hexo版本号<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo -v<br></code></pre></td></tr></table></figure></li>
+<li>上传<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo deploy<br></code></pre></td></tr></table></figure>
+简写<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hexo d<br></code></pre></td></tr></table></figure></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/hexo/">#hexo</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>使用方法</div>
+      <div>https://xiehongchen.github.io/2023/05/14/使用方法/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>XieHongchen</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年5月14日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/04/28/%E6%97%8B%E8%BD%AC%E4%B8%AD%E7%9A%84%E6%97%B6%E5%B7%AE%E6%95%88%E6%9E%9C/" title="旋转中的时差效果">
+                        <span class="hidden-mobile">旋转中的时差效果</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
