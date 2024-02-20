@@ -24,7 +24,7 @@
 <meta property="og:description" content="总结前端请求的一些问题">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-22T05:32:18.000Z">
-<meta property="article:modified_time" content="2023-04-22T14:21:21.603Z">
+<meta property="article:modified_time" content="2024-02-20T13:41:36.590Z">
 <meta property="article:author" content="XieHongchen">
 <meta property="article:tag" content="js">
 <meta property="article:tag" content="前端">
@@ -230,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.3k 字
+          4.6k 字
         
       </span>
     
@@ -241,7 +241,7 @@
         
         
         
-          28 分钟
+          39 分钟
         
       </span>
     
@@ -305,8 +305,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h1><h2 id="1、封装请求"><a href="#1、封装请求" class="headerlink" title="1、封装请求"></a>1、封装请求</h2><p><code>requset.js</code>用于封装请求</p>
-<p>然后<code>api</code>文件夹添加请求方法</p>
+                <h1 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h1><h2 id="1、封装请求"><a href="#1、封装请求" class="headerlink" title="1、封装请求"></a>1、封装请求</h2><p><code>requset.js</code>用于封装请求<br>然后<code>api</code>文件夹添加请求方法</p>
 <ul>
 <li>uniapp封装uni.requset</li>
 </ul>
@@ -320,8 +319,30 @@
 
 <h2 id="2、设置请求重载"><a href="#2、设置请求重载" class="headerlink" title="2、设置请求重载"></a>2、设置请求重载</h2><p>可以通过封装一个请求重试的函数，在请求失败时判断当前重试次数是否小于限定的最大重试次数，若小于则延迟一定时间后再次发起请求，并增加重试次数，若大于则停止重试。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 封装一个请求重试函数</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">retryRequest</span>(<span class="hljs-params">options, maxRetry = <span class="hljs-number">3</span>, interval = <span class="hljs-number">1000</span></span>) &#123;<br>  <span class="hljs-keyword">let</span> retryCount = <span class="hljs-number">0</span>; <span class="hljs-comment">// 重试次数</span><br>  <span class="hljs-keyword">const</span> <span class="hljs-title function_">request</span> = (<span class="hljs-params"></span>) =&gt; &#123;<br>    uni.<span class="hljs-title function_">request</span>(&#123;<br>      ...options,<br>      <span class="hljs-title function_">success</span>(<span class="hljs-params">res</span>) &#123;<br>        options.<span class="hljs-property">success</span> &amp;&amp; options.<span class="hljs-title function_">success</span>(res);<br>      &#125;,<br>      <span class="hljs-title function_">fail</span>(<span class="hljs-params">err</span>) &#123;<br>        <span class="hljs-keyword">if</span> (retryCount &lt; maxRetry) &#123; <span class="hljs-comment">// 如果重试次数小于最大重试次数</span><br>          retryCount++; <span class="hljs-comment">// 增加重试次数</span><br>          <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123; <span class="hljs-comment">// 延迟一定时间后再次发起请求</span><br>            <span class="hljs-title function_">request</span>();<br>          &#125;, interval);<br>        &#125; <span class="hljs-keyword">else</span> &#123; <span class="hljs-comment">// 如果重试次数大于等于最大重试次数</span><br>          options.<span class="hljs-property">fail</span> &amp;&amp; options.<span class="hljs-title function_">fail</span>(err); <span class="hljs-comment">// 请求失败</span><br>        &#125;<br>      &#125;<br>    &#125;);<br>  &#125;;<br>  <span class="hljs-title function_">request</span>();<br>&#125;<br><br><span class="hljs-comment">// 使用示例</span><br><span class="hljs-title function_">retryRequest</span>(&#123;<br>  <span class="hljs-attr">url</span>: <span class="hljs-string">&#x27;http://example.com/api&#x27;</span>,<br>  <span class="hljs-attr">method</span>: <span class="hljs-string">&#x27;GET&#x27;</span>,<br>  <span class="hljs-title function_">success</span>(<span class="hljs-params">res</span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(res);<br>  &#125;,<br>  <span class="hljs-title function_">fail</span>(<span class="hljs-params">err</span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(err);<br>  &#125;<br>&#125;, <span class="hljs-number">3</span>, <span class="hljs-number">1000</span>); <span class="hljs-comment">// 最大重试次数为 3，重试间隔为 1000ms</span><br></code></pre></td></tr></table></figure>
+<h2 id="xhr"><a href="#xhr" class="headerlink" title="xhr"></a>xhr</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();<br>xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;GET&#x27;</span>, <span class="hljs-string">&#x27;https://api.example.com/data&#x27;</span>, <span class="hljs-literal">true</span>);  <span class="hljs-comment">// 设置请求方法、URL和异步标志</span><br>xhr.<span class="hljs-property">onreadystatechange</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">if</span> (xhr.<span class="hljs-property">readyState</span> === <span class="hljs-number">4</span> &amp;&amp; xhr.<span class="hljs-property">status</span> === <span class="hljs-number">200</span>) &#123;  <span class="hljs-comment">// 检查请求的状态和响应的状态码</span><br>    <span class="hljs-keyword">const</span> response = <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">parse</span>(xhr.<span class="hljs-property">responseText</span>);  <span class="hljs-comment">// 解析响应数据</span><br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(response);<br>  &#125;<br>&#125;;<br>xhr.<span class="hljs-title function_">send</span>();  <span class="hljs-comment">// 发送请求</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">&#x27;https://api.example.com/data&#x27;</span>)<br>  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.<span class="hljs-title function_">json</span>())<br>  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data))<br>  .<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(error));<br></code></pre></td></tr></table></figure>
+
+<p>Fetch API的<code>response</code>对象表示HTTP响应，它包含了与响应相关的信息和方法。<code>response</code>对象提供了多个属性和方法，用于访问和处理响应数据。</p>
+<p>其中，常用的属性和方法有：</p>
+<ul>
+<li><code>response.ok</code>：一个只读的布尔值属性，表示响应是否成功（状态码在 200-299 范围内）。</li>
+<li><code>response.status</code>：一个只读的整数属性，表示响应的HTTP状态码。</li>
+<li><code>response.statusText</code>：一个只读的字符串属性，表示响应的HTTP状态文本。</li>
+<li><code>response.headers</code>：一个只读的 Headers 对象，表示响应头部信息。</li>
+<li><code>response.json()</code>：一个方法，返回一个Promise，用于将响应体解析为JSON格式的JavaScript对象。</li>
+<li><code>response.text()</code>：一个方法，返回一个Promise，用于将响应体解析为纯文本字符串。</li>
+<li><code>response.blob()</code>：一个方法，返回一个Promise，用于将响应体解析为 Blob 对象。</li>
+<li><code>response.arrayBuffer()</code>：一个方法，返回一个Promise，用于将响应体解析为 ArrayBuffer 数据。</li>
+<li><code>response.formData()</code>：一个方法，返回一个Promise，用于将响应体解析为 FormData 对象。</li>
+</ul>
+<p>根据需求，可以使用这些属性和方法来获取和处理响应数据。例如，可以使用<code>response.json()</code>方法将响应体解析为JSON对象，或者使用<code>response.text()</code>方法将响应体解析为文本字符串。</p>
+<h2 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js">axios.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;https://api.example.com/data&#x27;</span>)<br>  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(response.<span class="hljs-property">data</span>))<br>  .<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(error));<br></code></pre></td></tr></table></figure>
 
 
+
+<h2 id="请求参数"><a href="#请求参数" class="headerlink" title="请求参数"></a>请求参数</h2><h3 id="FormData"><a href="#FormData" class="headerlink" title="FormData"></a>FormData</h3><p>表单数据格式，需要设置请求头的<code>Content-Type</code>为<code>application/x-www-form-urlencoded</code></p>
+<h3 id="URLSearchParams"><a href="#URLSearchParams" class="headerlink" title="URLSearchParams"></a>URLSearchParams</h3>
                 
               </div>
             

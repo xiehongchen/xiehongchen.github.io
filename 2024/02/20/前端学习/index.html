@@ -1,0 +1,980 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#bbe8e8">
+  <meta name="author" content="XieHongchen">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="前端学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端学习">
+<meta property="og:url" content="https://xiehongchen.github.io/2024/02/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前端学习">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xiehongchen.github.io/Users/mac/Desktop/test/TestCase/%E7%AC%94%E8%AE%B0/image/test.png">
+<meta property="article:published_time" content="2024-02-20T13:42:38.000Z">
+<meta property="article:modified_time" content="2024-02-20T13:42:59.362Z">
+<meta property="article:author" content="XieHongchen">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xiehongchen.github.io/Users/mac/Desktop/test/TestCase/%E7%AC%94%E8%AE%B0/image/test.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>前端学习 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"xiehongchen.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/preview.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="前端学习"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        XieHongchen
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-02-20 21:42" pubdate>
+          2024年2月20日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          19k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          157 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">前端学习</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="undifined、ReferenceError"><a href="#undifined、ReferenceError" class="headerlink" title="undifined、ReferenceError"></a>undifined、ReferenceError</h1><h1 id="前端路由实现方式"><a href="#前端路由实现方式" class="headerlink" title="前端路由实现方式"></a>前端路由实现方式</h1><h3 id="history"><a href="#history" class="headerlink" title="history"></a>history</h3><p>我们都知道一个URL是由很多部分组成，包括协议、域名、路径、query、hash等，比如上面的例子，我们点击不同模块的时候可能看到是这样的URL</p>
+<ul>
+<li>首页：yourdomain.xxx.com&#x2F;index.html&#x2F;#&#x2F;</li>
+<li>商城：yourdomain.xxx.com&#x2F;index.html&#x2F;#&#x2F;shop</li>
+<li>购物车：yourdomain.xxx.com&#x2F;index.html&#x2F;#&#x2F;shopping-cart</li>
+<li>我的：yourdomain.xxx.com&#x2F;index.html&#x2F;#&#x2F;mine</li>
+</ul>
+<p>#号后面的，就是一个URL中关于hash的组成部分，可以看到，不同路由对应的hash是不一样的，但是它们都是在访问同一个静态资源index.html。我们要做的，就是如何能够监听到URL中关于hash部分发生的变化，从而做出对应的改变。</p>
+<p>其实浏览器已经暴露给我们一个现成的方法<code>hashchange</code>，在hash改变的时候，触发该事件。有了监听事件，且改变hash页面并不刷新，这样我们就可以在监听事件的回调函数中，执行我们展示和隐藏不同UI显示的功能，从而实现前端路由。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span> /&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge&quot;</span> /&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span></span><br><span class="hljs-tag">      <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover&quot;</span></span><br><span class="hljs-tag">      <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span></span><br><span class="hljs-tag">    /&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>实现简单的hash路由<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css"></span><br><span class="language-css">      * &#123;</span><br><span class="language-css">        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;</span><br><span class="language-css">        <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;</span><br><span class="language-css">        <span class="hljs-attribute">box-sizing</span>: border-box;</span><br><span class="language-css">      &#125;</span><br><span class="language-css">      <span class="hljs-selector-tag">html</span>,</span><br><span class="language-css">      <span class="hljs-selector-tag">body</span> &#123;</span><br><span class="language-css">        <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;</span><br><span class="language-css">      &#125;</span><br><span class="language-css">      <span class="hljs-selector-id">#content</span> &#123;</span><br><span class="language-css">        <span class="hljs-attribute">height</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-number">100vh</span> - <span class="hljs-number">50px</span>);</span><br><span class="language-css">        <span class="hljs-attribute">display</span>: flex;</span><br><span class="language-css">        <span class="hljs-attribute">align-items</span>: center;</span><br><span class="language-css">        <span class="hljs-attribute">justify-content</span>: center;</span><br><span class="language-css">        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">3em</span>;</span><br><span class="language-css">      &#125;</span><br><span class="language-css">      <span class="hljs-selector-id">#nav</span> &#123;</span><br><span class="language-css">        <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>;</span><br><span class="language-css">        <span class="hljs-attribute">position</span>: fixed;</span><br><span class="language-css">        <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;</span><br><span class="language-css">        <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;</span><br><span class="language-css">        <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;</span><br><span class="language-css">        <span class="hljs-attribute">display</span>: flex;</span><br><span class="language-css">      &#125;</span><br><span class="language-css">      <span class="hljs-selector-id">#nav</span> <span class="hljs-selector-tag">a</span> &#123;</span><br><span class="language-css">        <span class="hljs-attribute">width</span>: <span class="hljs-number">25%</span>;</span><br><span class="language-css">        <span class="hljs-attribute">display</span>: flex;</span><br><span class="language-css">        <span class="hljs-attribute">justify-content</span>: center;</span><br><span class="language-css">        <span class="hljs-attribute">align-items</span>: center;</span><br><span class="language-css">        <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;</span><br><span class="language-css">      &#125;</span><br><span class="language-css">      <span class="hljs-selector-id">#nav</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-pseudo">:last-of-type</span>) &#123;</span><br><span class="language-css">        <span class="hljs-attribute">border-right</span>: none;</span><br><span class="language-css">      &#125;</span><br><span class="language-css">    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;nav&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#/&quot;</span>&gt;</span>首页<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#/shop&quot;</span>&gt;</span>商城<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#/shopping-cart&quot;</span>&gt;</span>购物车<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#/mine&quot;</span>&gt;</span>我的<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">    <span class="hljs-keyword">class</span> <span class="hljs-title class_">VueRouter</span> &#123;</span><br><span class="language-javascript">      <span class="hljs-title function_">constructor</span>(<span class="hljs-params">routes = []</span>) &#123;</span><br><span class="language-javascript">        <span class="hljs-variable language_">this</span>.<span class="hljs-property">routes</span> = routes; <span class="hljs-comment">// 路由映射</span></span><br><span class="language-javascript">        <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentHash</span> = <span class="hljs-string">&quot;&quot;</span>; <span class="hljs-comment">// 当前的hash</span></span><br><span class="language-javascript">        <span class="hljs-variable language_">this</span>.<span class="hljs-property">refresh</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">refresh</span>.<span class="hljs-title function_">bind</span>(<span class="hljs-variable language_">this</span>);</span><br><span class="language-javascript">        <span class="hljs-variable language_">window</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;load&quot;</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">refresh</span>, <span class="hljs-literal">false</span>);</span><br><span class="language-javascript">        <span class="hljs-variable language_">window</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;hashchange&quot;</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">refresh</span>, <span class="hljs-literal">false</span>);</span><br><span class="language-javascript">      &#125;</span><br><span class="language-javascript"></span><br><span class="language-javascript">      <span class="hljs-title function_">getUrlPath</span>(<span class="hljs-params">url</span>) &#123;</span><br><span class="language-javascript">        <span class="hljs-comment">// 获取hash</span></span><br><span class="language-javascript">        <span class="hljs-keyword">return</span> url.<span class="hljs-title function_">indexOf</span>(<span class="hljs-string">&quot;#&quot;</span>) &gt;= <span class="hljs-number">0</span> ? url.<span class="hljs-title function_">slice</span>(url.<span class="hljs-title function_">indexOf</span>(<span class="hljs-string">&quot;#&quot;</span>) + <span class="hljs-number">1</span>) : <span class="hljs-string">&quot;/&quot;</span>;</span><br><span class="language-javascript">      &#125;</span><br><span class="language-javascript"></span><br><span class="language-javascript">      <span class="hljs-title function_">refresh</span>(<span class="hljs-params">event</span>) &#123;</span><br><span class="language-javascript">        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(event);</span><br><span class="language-javascript">        <span class="hljs-comment">// URL hash发生改变的时候，拿到当前的hash</span></span><br><span class="language-javascript">        <span class="hljs-keyword">let</span> newHash = <span class="hljs-string">&quot;&quot;</span>,</span><br><span class="language-javascript">          oldHash = <span class="hljs-literal">null</span>;</span><br><span class="language-javascript">        <span class="hljs-keyword">if</span> (event.<span class="hljs-property">newURL</span>) &#123;</span><br><span class="language-javascript">          oldHash = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">getUrlPath</span>(event.<span class="hljs-property">oldURL</span> || <span class="hljs-string">&quot;&quot;</span>);</span><br><span class="language-javascript">          newHash = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">getUrlPath</span>(event.<span class="hljs-property">newURL</span> || <span class="hljs-string">&quot;&quot;</span>);</span><br><span class="language-javascript">        &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="language-javascript">          newHash = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">getUrlPath</span>(<span class="hljs-variable language_">window</span>.<span class="hljs-property">location</span>.<span class="hljs-property">hash</span>);</span><br><span class="language-javascript">          <span class="hljs-variable language_">window</span>.<span class="hljs-property">history</span>.<span class="hljs-property">hash</span> = <span class="hljs-string">&quot;#/&quot;</span>;</span><br><span class="language-javascript">        &#125;</span><br><span class="language-javascript">        <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentHash</span> = newHash;</span><br><span class="language-javascript">        <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">matchComponent</span>();</span><br><span class="language-javascript">      &#125;</span><br><span class="language-javascript"></span><br><span class="language-javascript">      <span class="hljs-title function_">matchComponent</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">        <span class="hljs-keyword">let</span> curRoute = <span class="hljs-variable language_">this</span>.<span class="hljs-property">routes</span>.<span class="hljs-title function_">find</span>(</span><br><span class="language-javascript">          <span class="hljs-function">(<span class="hljs-params">route</span>) =&gt;</span> route.<span class="hljs-property">path</span> === <span class="hljs-variable language_">this</span>.<span class="hljs-property">currentHash</span></span><br><span class="language-javascript">        );</span><br><span class="language-javascript">        <span class="hljs-keyword">if</span> (!curRoute) &#123;</span><br><span class="language-javascript">          <span class="hljs-comment">// 当前URL中的hash不存在的时候，默认取第一个，当然真实场景下，可能会有各种情况，取决于业务逻辑</span></span><br><span class="language-javascript">          curRoute = <span class="hljs-variable language_">this</span>.<span class="hljs-property">routes</span>.<span class="hljs-title function_">find</span>(<span class="hljs-function">(<span class="hljs-params">route</span>) =&gt;</span> route.<span class="hljs-property">path</span> === <span class="hljs-string">&quot;/&quot;</span>);</span><br><span class="language-javascript">        &#125;</span><br><span class="language-javascript">        <span class="hljs-keyword">const</span> &#123; component &#125; = curRoute;</span><br><span class="language-javascript">        <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">&quot;#content&quot;</span>).<span class="hljs-property">innerHTML</span> = component;</span><br><span class="language-javascript">      &#125;</span><br><span class="language-javascript">    &#125;</span><br><span class="language-javascript"></span><br><span class="language-javascript">    <span class="hljs-keyword">const</span> router = <span class="hljs-keyword">new</span> <span class="hljs-title class_">VueRouter</span>([</span><br><span class="language-javascript">      &#123;</span><br><span class="language-javascript">        <span class="hljs-attr">path</span>: <span class="hljs-string">&quot;/&quot;</span>,</span><br><span class="language-javascript">        <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;home&quot;</span>,</span><br><span class="language-javascript">        <span class="hljs-attr">component</span>: <span class="hljs-string">&quot;&lt;div&gt;首页内容&lt;/div&gt;&quot;</span></span><br><span class="language-javascript">      &#125;,</span><br><span class="language-javascript">      &#123;</span><br><span class="language-javascript">        <span class="hljs-attr">path</span>: <span class="hljs-string">&quot;/shop&quot;</span>,</span><br><span class="language-javascript">        <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;shop&quot;</span>,</span><br><span class="language-javascript">        <span class="hljs-attr">component</span>: <span class="hljs-string">&quot;&lt;div&gt;商城内容&lt;/div&gt;&quot;</span></span><br><span class="language-javascript">      &#125;,</span><br><span class="language-javascript">      &#123;</span><br><span class="language-javascript">        <span class="hljs-attr">path</span>: <span class="hljs-string">&quot;/shopping-cart&quot;</span>,</span><br><span class="language-javascript">        <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;shopping-cart&quot;</span>,</span><br><span class="language-javascript">        <span class="hljs-attr">component</span>: <span class="hljs-string">&quot;&lt;div&gt;购物车内容&lt;/div&gt;&quot;</span></span><br><span class="language-javascript">      &#125;,</span><br><span class="language-javascript">      &#123;</span><br><span class="language-javascript">        <span class="hljs-attr">path</span>: <span class="hljs-string">&quot;/mine&quot;</span>,</span><br><span class="language-javascript">        <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;mine&quot;</span>,</span><br><span class="language-javascript">        <span class="hljs-attr">component</span>: <span class="hljs-string">&quot;&lt;div&gt;我的内容&lt;/div&gt;&quot;</span></span><br><span class="language-javascript">      &#125;</span><br><span class="language-javascript">    ]);</span><br><span class="language-javascript">  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>从上面的一些描述和实践，我们可以得出以下结论：</p>
+<ul>
+<li>hash模式所有的工作都是在前端完成的，不需要后端服务的配合</li>
+<li>hash模式的实现方式就是通过监听URL中hash部分的变化，从而做出对应的渲染逻辑</li>
+<li>hash模式下，URL中会带有#，看起来不太美观</li>
+</ul>
+<h3 id="history-1"><a href="#history-1" class="headerlink" title="history"></a>history</h3><p>history路由模式的实现，是要归功于HTML5提供的一个history全局对象，可以将它理解为其中包含了关于我们访问网页（历史会话）的一些信息。同时它还暴露了一些有用的方法，比如：</p>
+<ul>
+<li>window.history.go 可以跳转到浏览器会话历史中的指定的某一个记录页</li>
+<li>window.history.forward 指向浏览器会话历史中的下一页，跟浏览器的前进按钮相同</li>
+<li>window.history.back 返回浏览器会话历史中的上一页，跟浏览器的回退按钮功能相同</li>
+<li>window.history.pushState 可以将给定的数据压入到浏览器会话历史栈中</li>
+<li>window.history.replaceState 将当前的会话页面的url替换成指定的数据</li>
+</ul>
+<p>而history路由的实现，主要就是依靠于pushState与replaceState实现的，这里我们先总结下它们的一些特点</p>
+<ul>
+<li>都会改变当前页面显示的url，但都不会刷新页面</li>
+<li>pushState是压入浏览器的会话历史栈中，会使得history.length加1，而replaceState是替换当前的这条会话历史，因此不会增加history.length</li>
+</ul>
+<p>既然已经能够通过pushState或replaceState实现改变URL而不刷新页面，那么是不是如果我们能够监听到改变URL这个动作，就可以实现前端渲染逻辑的处理呢？这个时候，我们还要了解一个事件处理程序popstate，先看下它的官方定义</p>
+<blockquote>
+<p>每当激活同一文档中不同的历史记录条目时，<code>popstate</code> 事件就会在对应的 <code>window</code> 对象上触发。如果当前处于激活状态的历史记录条目是由 <code>history.pushState()</code> 方法创建的或者是由 <code>history.replaceState()</code> 方法修改的，则 <code>popstate</code> 事件的 <code>state</code> 属性包含了这个历史记录条目的 <code>state</code> 对象的一个拷贝。</p>
+<p>调用 <code>history.pushState()</code> 或者 <code>history.replaceState()</code> 不会触发 <code>popstate</code> 事件。<code>popstate</code> 事件只会在浏览器某些行为下触发，比如点击后退按钮（或者在 JavaScript 中调用 <code>history.back()</code> 方法）。即，在同一文档的两个历史记录条目之间导航会触发该事件。</p>
+</blockquote>
+<p>总结下就是以下几点</p>
+<ul>
+<li>history.pushState和history.replaceState方法是不会触发popstate事件的</li>
+<li>但是浏览器的某些行为会导致popstate，比如go、back、forward</li>
+<li>popstate事件对象中的state属性，可以理解是我们在通过history.pushState或history.replaceState方法时，传入的指定的数据</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> _wr = <span class="hljs-keyword">function</span>(<span class="hljs-params">type</span>) &#123;<br>   <span class="hljs-keyword">let</span> orig = history[type]<br>   <span class="hljs-keyword">return</span> <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>      <span class="hljs-keyword">let</span> rv = orig.<span class="hljs-title function_">apply</span>(<span class="hljs-variable language_">this</span>, <span class="hljs-variable language_">arguments</span>)<br>      <span class="hljs-keyword">let</span> e = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Event</span>(type)<br>      e.<span class="hljs-property">arguments</span> = <span class="hljs-variable language_">arguments</span><br>      <span class="hljs-variable language_">window</span>.<span class="hljs-title function_">dispatchEvent</span>(e)<br>      <span class="hljs-keyword">return</span> rv<br>   &#125;<br>&#125;<br><br> history.<span class="hljs-property">pushState</span> = <span class="hljs-title function_">_wr</span>(<span class="hljs-string">&#x27;pushState&#x27;</span>)<br> history.<span class="hljs-property">replaceState</span> = <span class="hljs-title function_">_wr</span>(<span class="hljs-string">&#x27;replaceState&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+
+
+<p>hash模式是不需要后端服务配合的。但是history模式下，如果你再跳转路由后再次刷新会得到404的错误，这个错误说白了就是浏览器会把整个地址当成一个可访问的静态资源路径进行访问，然后服务端并没有这个文件～看下面例子更好理解</p>
+<p><strong>没刷新时，只是通过pushState改变URL，不刷新页面</strong></p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs tex">http://192.168.30.161:5500/ === http://192.168.30.161:5500/index.html // 默认访问路径下的index.html文件，没毛病<br>http://192.168.30.161:5500/home === http://192.168.30.161:5500/index.html // 仍然访问路径下的index.html文件，没毛病<br>...<br>http://192.168.30.161:5500/mine === http://192.168.30.161:5500/index.html // 所有的路由都是访问路径下的index.html，没毛病<br></code></pre></td></tr></table></figure>
+
+<p><strong>一旦在某个路由下刷新页面的时候，想当于去该路径下寻找可访问的静态资源index.html，无果，报错</strong></p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs tex">http://192.168.30.161:5500/mine === http://192.168.30.161:5500/mine/index.html文件，出问题了，服务器上并没有这个资源，404😭<br></code></pre></td></tr></table></figure>
+
+<p><strong>所以一般情况下，我们都需要配置下nginx，告诉服务器，当我们访问的路径资源不存在的时候，默认指向静态资源index.html</strong></p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-section">location</span> / &#123;<br>  <span class="hljs-attribute">try_files</span> <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ /index.html;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>一般路由实现主要有history和hash两种方式</p>
+<p>hash的实现全部在前端，不需要后端服务器配合，兼容性好，主要是通过监听hashchange事件，处理前端业务逻辑</p>
+<p>history的实现，需要服务器做以下简单的配置，通过监听pushState及replaceState事件，处理前端业务逻辑</p>
+<h3 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h3><p>abstract 是vue路由中的第三种模式，本身是用来在不支持浏览器API的环境中，充当fallback，而不论是hash还是history模式都会对浏览器上的url产生作用，他一般要实现的功能就是在已存在的路由页面中内嵌其他的路由页面，而保持在浏览器当中依旧显示当前页面的路由path，这就是abstract这种与浏览器分离的路由模式。</p>
+<h1 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h1><h3 id="路由懒加载"><a href="#路由懒加载" class="headerlink" title="路由懒加载"></a>路由懒加载</h3><p>SPA 项目，一个路由对应一个页面，如果不做处理，项目打包后，会把所有页面打包成一个文件，<strong>当用户打开首页时，会一次性加载所有的资源</strong>，造成首页加载很慢，降低用户体验</p>
+<p><strong>原理</strong></p>
+<p>ES6的动态地加载模块——<code>import()</code></p>
+<p>调用 import() 之处，被作为分离的模块起点，意思是，被请求的模块和它引用的所有子模块，会分离到一个单独的 chunk 中</p>
+<p>webpackChunkName 作用是 webpack 在打包的时候，对异步引入的库代码（lodash）进行代码分割时，设置代码块的名字。webpack 会将任何一个异步模块与相同的块名称组合到相同的异步块中</p>
+<h3 id="组件懒加载"><a href="#组件懒加载" class="headerlink" title="组件懒加载"></a>组件懒加载</h3><p>和路由懒加载一致，也是使用import</p>
+<h3 id="骨架屏"><a href="#骨架屏" class="headerlink" title="骨架屏"></a>骨架屏</h3><p>使用骨架屏，可以缩短白屏时间，提升用户体验。国内大多数的主流网站都使用了骨架屏，特别是手机端的项目</p>
+<p>SPA 单页应用，无论 vue 还是 react，最初的 html 都是空白的，需要通过加载 JS 将内容挂载到根节点上，这套机制的副作用：会造成长时间的白屏</p>
+<p>常见的骨架屏插件就是基于这种原理，在项目打包时将骨架屏的内容直接放到 html 文件的根节点中</p>
+<h3 id="长列表虚拟滚动"><a href="#长列表虚拟滚动" class="headerlink" title="长列表虚拟滚动"></a>长列表虚拟滚动</h3><p>首页中不乏有需要渲染长列表的场景，当渲染条数过多时，所需要的渲染时间会很长，滚动时还会造成页面卡顿，整体体验非常不好</p>
+<p><strong>虚拟滚动——指的是只渲染可视区域的列表项，非可见区域的</strong>不渲染，在滚动时动态更新可视区域，该方案在优化大量数据渲染时效果是很明显的</p>
+<p>虚拟滚动图例：</p>
+<p><img src="/Users/mac/Desktop/test/TestCase/%E7%AC%94%E8%AE%B0/image/test.png" srcset="/img/loading.gif" lazyload alt="test"></p>
+<p>虚拟滚动基本原理：</p>
+<p>计算出 totalHeight 列表总高度，并在触发时滚动事件时根据 scrollTop 值不断更新 startIndex 以及 endIndex ，以此从列表数据 listData 中截取对应元素</p>
+<p><strong>插件使用</strong>： vue-virtual-scroller、vue-virtual-scroll-list、react-tiny-virtual-list、react-virtualized</p>
+<h3 id="Web-Worker-优化长任务"><a href="#Web-Worker-优化长任务" class="headerlink" title="Web Worker 优化长任务"></a>Web Worker 优化长任务</h3><p>由于浏览器 GUI 渲染线程与 JS 引擎线程是互斥的关系，当页面中有很多长任务时，会造成页面 UI 阻塞，出现界面卡顿、掉帧等情况</p>
+<p>并不是执行时间超过 50ms 的任务，就可以使用 Web Worker，还要先考虑<code>通信时长</code>的问题</p>
+<p>假如一个运算执行时长为 100ms，但是通信时长为 300ms， 用了 Web Worker可能会更慢</p>
+<p>比如新建一个 web worker, 浏览器会加载对应的 worker.js 资源，下图中的 Time 是这个资源的通信时长（也叫加载时长）</p>
+<p><strong>当任务的运算时长 - 通信时长 &gt; 50ms，推荐使用Web Worker</strong></p>
+<h3 id="requestAnimationFrame-制作动画"><a href="#requestAnimationFrame-制作动画" class="headerlink" title="requestAnimationFrame 制作动画"></a>requestAnimationFrame 制作动画</h3><p><code>requestAnimationFrame</code> 是浏览器专门为动画提供的 API，它的刷新频率与显示器的频率保持一致，使用该 api 可以解决用 setTimeout&#x2F;setInterval 制作动画卡顿的情况</p>
+<p>setTimeout&#x2F;setInterval、requestAnimationFrame 三者的区别：</p>
+<p>1）引擎层面</p>
+<p>setTimeout&#x2F;setInterval 属于 <code>JS引擎</code>，requestAnimationFrame 属于 <code>GUI引擎</code></p>
+<p><code>JS引擎与GUI引擎</code>是互斥的，也就是说 GUI 引擎在渲染时会阻塞 JS 引擎的计算</p>
+<p>2）时间是否准确</p>
+<p>requestAnimationFrame 刷新频率是固定且准确的，但 setTimeout&#x2F;setInterval 是宏任务，根据事件轮询机制，其他任务会阻塞或延迟js任务的执行，会出现定时器不准的情况</p>
+<p>3）性能层面</p>
+<p>当页面被隐藏或最小化时，setTimeout&#x2F;setInterval 定时器仍会在后台执行动画任务，而使用 requestAnimationFrame 当页面处于未激活的状态下，屏幕刷新任务会被系统暂停</p>
+<h3 id="JS的6种加载方式"><a href="#JS的6种加载方式" class="headerlink" title="JS的6种加载方式"></a>JS的6种加载方式</h3><p><strong>正常模式</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;index.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>这种情况下 JS 会阻塞 dom 渲染，浏览器必须等待 index.js 加载和执行完成后才能去做其它事情</p>
+<p><strong>async模式</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">async</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;index.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>async 模式下，它的加载是异步的，JS 不会阻塞 DOM 的渲染，async 加载是无顺序的，当它加载结束，JS 会立即执行</p>
+<p>使用场景：若该 JS 资源与 DOM 元素没有依赖关系，也不会产生其他资源所需要的数据时，可以使用async 模式，比如埋点统计</p>
+<p><strong>defer模式</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">defer</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;index.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>defer 模式下，JS 的加载也是异步的，defer 资源会在 <code>DOMContentLoaded</code> 执行之前，并且 defer 是有顺序的加载</p>
+<p>如果有多个设置了 defer 的 script 标签存在，则会按照引入的前后顺序执行，即便是后面的 script 资源先返回</p>
+<p>所以 defer 可以用来控制 JS 文件的执行顺序，比如 element-ui.js 和 vue.js，因为 element-ui.js 依赖于 vue，所以必须先引入 vue.js，再引入 element-ui.js</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">defer</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;vue.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">defer</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;element-ui.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>defer 使用场景：一般情况下都可以使用 defer，特别是需要控制资源加载顺序时</p>
+<p><strong>module模式</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;module&quot;</span>&gt;</span><span class="language-javascript"><span class="hljs-keyword">import</span> &#123; a &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./a.js&#x27;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>在主流的现代浏览器中，script 标签的属性可以加上 <code>type=&quot;module&quot;</code>，浏览器会对其内部的 import 引用发起 HTTP 请求，获取模块内容。这时 script 的行为会像是 defer 一样，在后台下载，并且等待 DOM 解析</p>
+<p>Vite 就是利用浏览器支持原生的 <code>es module</code> 模块，开发时跳过打包的过程，提升编译效率</p>
+<p><strong>preload</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;preload&quot;</span> <span class="hljs-attr">as</span>=<span class="hljs-string">&quot;script&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;index.js&quot;</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>link 标签的 preload 属性：用于提前加载一些需要的依赖，这些资源会优先加载</p>
+<p>preload 特点：</p>
+<p>1）preload 加载的资源是在浏览器渲染机制之前进行处理的，并且不会阻塞 onload 事件；</p>
+<p>2）preload 加载的 JS 脚本其加载和执行的过程是分离的，即 preload 会预加载相应的脚本代码，待到需要时自行调用；</p>
+<p><strong>prefetch</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;prefetch&quot;</span> <span class="hljs-attr">as</span>=<span class="hljs-string">&quot;script&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;index.js&quot;</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>prefetch 是利用浏览器的空闲时间，加载页面将来可能用到的资源的一种机制；通常可以用于加载其他页面（非首页）所需要的资源，以便加快后续页面的打开速度</p>
+<p>prefetch 特点：</p>
+<p>1）pretch 加载的资源可以获取非当前页面所需要的资源，并且将其放入缓存至少5分钟（无论资源是否可以缓存）</p>
+<p>2）当页面跳转时，未完成的 prefetch 请求不会被中断</p>
+<p><strong>加载方式总结</strong></p>
+<p>async、defer 是 script 标签的专属属性，对于网页中的其他资源，可以通过 link 的 preload、prefetch 属性来预加载</p>
+<p>如今现代框架已经将 preload、prefetch 添加到打包流程中了，通过灵活的配置，去使用这些预加载功能，同时我们也可以审时度势地向 script 标签添加 async、defer 属性去处理资源，这样可以显著提升性能</p>
+<h3 id="图片的优化"><a href="#图片的优化" class="headerlink" title="图片的优化"></a>图片的优化</h3><p><strong>图片的动态裁剪</strong></p>
+<p><strong>图片的懒加载</strong></p>
+<p>图片懒加载实现原理：</p>
+<p>由于浏览器会自动对页面中的 img 标签的 src 属性发送请求并下载图片，可以通过 html5 自定义属性 data-xxx 先暂存 src 的值，然后在图片出现在屏幕可视区域的时候，再将 data-xxx 的值重新赋值到 img 的 src 属性即可</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">&quot;./images/1.jpg&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">&quot;./images/2.jpg&quot;</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>使用字体图标</strong></p>
+<p>字体图标是页面使用小图标的不二选择，最常用的就是 <a href="https://link.juejin.cn/?target=https://www.iconfont.cn/home/index">iconfont</a></p>
+<p>字体图标的优点：</p>
+<p>1）轻量级：一个图标字体要比一系列的图像要小。一旦字体加载了，图标就会马上渲染出来，减少了 http 请求</p>
+<p>2）灵活性：可以随意的改变颜色、产生阴影、透明效果、旋转等</p>
+<p>3）兼容性：几乎支持所有的浏览器，请放心使用</p>
+<p><strong>图片转 base64 格式</strong></p>
+<p>将小图片转换为 base64 编码字符串，并写入 HTML 或者 CSS 中，减少 http 请求</p>
+<p>转 base64 格式的优缺点：</p>
+<p>1）它处理的往往是非常小的图片，因为 Base64 编码后，图片大小会膨胀为原文件的 4&#x2F;3，如果对大图也使用 Base64 编码，后者的体积会明显增加，即便减少了 http 请求，也无法弥补这庞大的体积带来的性能开销，得不偿失</p>
+<p>2）在传输非常小的图片的时候，Base64 带来的文件体积膨胀、以及浏览器解析 Base64 的时间开销，与它节省掉的 http 请求开销相比，可以忽略不计，这时候才能真正体现出它在性能方面的优势</p>
+<h1 id="前端模块化"><a href="#前端模块化" class="headerlink" title="前端模块化"></a>前端模块化</h1><h3 id="1-全局函数式编程"><a href="#1-全局函数式编程" class="headerlink" title="1.全局函数式编程"></a>1.全局函数式编程</h3><p>在早期的Web开发中，通常使用全局范围内声明函数和变量的方式来组织代码。例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> module1Data = <span class="hljs-string">&#x27;module1 data&#x27;</span>;<br><span class="hljs-keyword">function</span> <span class="hljs-title function_">module1Func</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(module1Data);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这种方式存在的问题主要有命名冲突、函数间依赖关系不明显、维护困难等。</p>
+<h3 id="2-命名空间模式"><a href="#2-命名空间模式" class="headerlink" title="2.命名空间模式"></a>2.命名空间模式</h3><p>随着对代码组织方式的需求增加，开发者开始通过定义全局对象，将所有函数和变量封装在这个对象中，也就是命名空间模式。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> myApp = &#123;<br>    <span class="hljs-attr">module1Data</span>: <span class="hljs-string">&#x27;module1 data&#x27;</span>,<br>    <span class="hljs-attr">module1Func</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">module1Data</span>);<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p>这种方式解决了全局命名冲突的问题，但是模块间的依赖关系依旧不明显，同时所有依赖都需要在命名空间对象中手动管理。</p>
+<h3 id="3-CommonJS"><a href="#3-CommonJS" class="headerlink" title="3.CommonJS"></a>3.CommonJS</h3><p>CommonJS模块规范是Node.js采用的规范，使用<code>require</code>函数加载模块，通过<code>module.exports</code>导出模块。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// a.js</span><br><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = <span class="hljs-string">&#x27;Hello world&#x27;</span>;<br><br><span class="hljs-comment">// b.js</span><br><span class="hljs-keyword">var</span> a = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./a&#x27;</span>);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a); <span class="hljs-comment">// 输出 &#x27;Hello world&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>CommonJS使用同步加载方式，适用于服务器端，但由于网络请求的异步特性，不适合在浏览器环境使用。</p>
+<h4 id="require函数"><a href="#require函数" class="headerlink" title="require函数"></a><code>require</code>函数</h4><p><code>require</code>函数的主要任务是根据模块的文件路径读取模块文件，然后执行模块代码，最后返回模块的<code>exports</code>对象。</p>
+<p><code>require</code>函数的实现代码大致如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">require</span>(<span class="hljs-params">modulePath</span>)&#123;<br>    <span class="hljs-comment">// 读取模块代码</span><br>    <span class="hljs-keyword">const</span> code = fs.<span class="hljs-title function_">readFileSync</span>(modulePath);<br>    <br>    <span class="hljs-comment">// 包装模块代码</span><br>    <span class="hljs-keyword">const</span> wrapper = <span class="hljs-title class_">Function</span>(<span class="hljs-string">&#x27;exports&#x27;</span>, <span class="hljs-string">&#x27;require&#x27;</span>, <span class="hljs-string">&#x27;module&#x27;</span>, <span class="hljs-string">&#x27;__filename&#x27;</span>, <span class="hljs-string">&#x27;__dirname&#x27;</span>, <span class="hljs-string">`<span class="hljs-subst">$&#123;code&#125;</span>\n return module.exports;`</span>);<br>    <br>    <span class="hljs-keyword">const</span> <span class="hljs-built_in">exports</span> = &#123;&#125;;<br>    <span class="hljs-keyword">const</span> <span class="hljs-variable language_">module</span> = &#123; <span class="hljs-built_in">exports</span> &#125;;<br>    <br>    <span class="hljs-comment">// 执行模块代码</span><br>    <span class="hljs-title function_">wrapper</span>(<span class="hljs-built_in">exports</span>, <span class="hljs-built_in">require</span>, <span class="hljs-variable language_">module</span>);<br>    <br>    <span class="hljs-comment">// 返回模块的exports对象</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>其中，<code>wrapper</code>函数的参数<code>exports</code>和<code>module</code>就是模块的<code>exports</code>和<code>module</code>对象，这样我们就可以在模块中通过<code>exports</code>和<code>module.exports</code>来导出模块。</p>
+<p><code>require</code>函数在执行模块代码时，会先将模块代码包装到一个函数中，然后调用这个函数。这样做的好处是可以将模块代码隔离到一个函数作用域中，防止模块内的变量污染全局作用域。</p>
+<h4 id="module-exports"><a href="#module-exports" class="headerlink" title="module.exports"></a><code>module.exports</code></h4><p>每个CommonJS模块都有一个<code>module</code>对象，这个对象有一个<code>exports</code>属性用于导出模块。当其他模块通过<code>require</code>函数加载这个模块时，就可以获取到<code>module.exports</code>对象。</p>
+<p><code>module.exports</code>的初始值是一个空对象<code>&#123;&#125;</code>，我们可以添加属性到这个对象上，也可以直接将<code>module.exports</code>赋值为一个函数或其他类型的值。</p>
+<p>例如，以下代码展示了如何使用<code>module.exports</code>导出一个函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// a.js</span><br><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Hello world&#x27;</span>);<br>&#125;;<br><br><span class="hljs-comment">// b.js</span><br><span class="hljs-keyword">const</span> a = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./a&#x27;</span>);<br><span class="hljs-title function_">a</span>(); <span class="hljs-comment">// 输出 &#x27;Hello world&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>以上就是CommonJS模块的实现原理。虽然CommonJS主要用于服务器端，但其模块化思想和实现方式对于前端模块化的发展有着深远影响。</p>
+<h3 id="4-AMD（Asynchronous-Module-Definition）"><a href="#4-AMD（Asynchronous-Module-Definition）" class="headerlink" title="4.AMD（Asynchronous Module Definition）"></a>4.AMD（Asynchronous Module Definition）</h3><p>AMD规范是由RequireJS提出的，特点是异步加载模块，适合用在浏览器环境。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// AMD</span><br><span class="hljs-title function_">define</span>([<span class="hljs-string">&#x27;dependency&#x27;</span>], <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;module content&#x27;</span>;<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>AMD规范的语法较为复杂，但能在浏览器环境中异步加载模块。</p>
+<h3 id="5-UMD（Universal-Module-Definition）"><a href="#5-UMD（Universal-Module-Definition）" class="headerlink" title="5.UMD（Universal Module Definition）"></a>5.UMD（Universal Module Definition）</h3><p>UMD规范试图提供一种解决方案，让同一段代码在CommonJS和AMD环境中都能运行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs javascript">(<span class="hljs-keyword">function</span> (<span class="hljs-params">root, factory</span>) &#123;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> define === <span class="hljs-string">&#x27;function&#x27;</span> &amp;&amp; define.<span class="hljs-property">amd</span>) &#123;<br>        <span class="hljs-comment">// AMD</span><br>       <br><br> <span class="hljs-title function_">define</span>([<span class="hljs-string">&#x27;jquery&#x27;</span>], factory);<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">exports</span> === <span class="hljs-string">&#x27;object&#x27;</span>) &#123;<br>        <span class="hljs-comment">// Node, CommonJS</span><br>        <span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = <span class="hljs-title function_">factory</span>(<span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;jquery&#x27;</span>));<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-comment">// 浏览器全局变量</span><br>        root.<span class="hljs-property">returnExports</span> = <span class="hljs-title function_">factory</span>(root.<span class="hljs-property">jQuery</span>);<br>    &#125;<br>&#125;(<span class="hljs-variable language_">this</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params">$</span>) &#123;<br>    <span class="hljs-comment">// 模块代码</span><br>&#125;));<br></code></pre></td></tr></table></figure>
+
+<p>UMD通过判断环境中是否存在<code>define</code>和<code>exports</code>对象，来判断是哪种模块环境，从而使用对应的模块化方案。</p>
+<h3 id="6-ES6模块化"><a href="#6-ES6模块化" class="headerlink" title="6.ES6模块化"></a>6.ES6模块化</h3><p>ES6模块化是ECMAScript 6（ES2015）中新引入的模块系统，使用<code>import</code>关键字加载模块，通过<code>export</code>关键字导出模块。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// a.js</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> a = <span class="hljs-string">&#x27;Hello world&#x27;</span>;<br><br><span class="hljs-comment">// b.js</span><br><span class="hljs-keyword">import</span> &#123; a &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./a.js&#x27;</span>;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(a); <span class="hljs-comment">// 输出 &#x27;Hello world&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>ES6模块化具有静态性，这种静态性质让依赖关系更加明显，有利于工具进行优化。此外，ES6模块是异步加载，也适合在浏览器环境中使用。</p>
+<h1 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h1><h1 id="webpack打包优化"><a href="#webpack打包优化" class="headerlink" title="webpack打包优化"></a>webpack打包优化</h1><h1 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h1><h1 id="CDN缓存机制和原理"><a href="#CDN缓存机制和原理" class="headerlink" title="CDN缓存机制和原理"></a>CDN缓存机制和原理</h1><h1 id="websocket原理"><a href="#websocket原理" class="headerlink" title="websocket原理"></a>websocket原理</h1><h1 id="白屏时间分析"><a href="#白屏时间分析" class="headerlink" title="白屏时间分析"></a>白屏时间分析</h1><h1 id="登录功能"><a href="#登录功能" class="headerlink" title="登录功能"></a>登录功能</h1><h1 id="大文件上传"><a href="#大文件上传" class="headerlink" title="大文件上传"></a>大文件上传</h1><h1 id="Cookie-Session-SessionStorage-LocalStorage"><a href="#Cookie-Session-SessionStorage-LocalStorage" class="headerlink" title="Cookie, Session, SessionStorage, LocalStorage"></a>Cookie, Session, SessionStorage, LocalStorage</h1><h2 id="1-什么是Cookie？"><a href="#1-什么是Cookie？" class="headerlink" title="1. 什么是Cookie？"></a>1. 什么是Cookie？</h2><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p>Cookie是一种在客户端存储数据的机制，它将数据以键值对的形式存储在用户的浏览器中。Cookie具有以下属性：</p>
+<ul>
+<li><strong>名称和值</strong>：每个Cookie都有一个名称和对应的值，以键值对的形式表示。</li>
+<li><strong>域（Domain）</strong>：Cookie的域属性指定了可以访问Cookie的域名。默认情况下，Cookie的域属性设置为创建Cookie的页面的域名。</li>
+<li><strong>路径（Path）</strong>：Cookie的路径属性指定了可以访问Cookie的路径。默认情况下，Cookie的路径属性设置为创建Cookie的页面的路径。</li>
+<li><strong>过期时间（Expires&#x2F;Max-Age）</strong>：Cookie的过期时间属性指定了Cookie的有效期限。可以通过设置<code>Expires</code>或<code>Max-Age</code>属性来定义过期时间。过期时间可以是一个具体的日期和时间，也可以是一个从当前时间开始的时间段。</li>
+<li><strong>安全标志（Secure）</strong>：Cookie的安全标志属性指定了是否只在通过HTTPS协议发送请求时才发送Cookie。</li>
+<li><strong>同站点标志（SameSite）</strong>：Cookie的同站点标志属性指定了是否限制Cookie只能在同一站点发送。可以设置为<code>Strict</code>（仅允许来自当前站点的请求携带Cookie）或<code>Lax</code>（允许部分跨站点请求携带Cookie）。</li>
+</ul>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>Cookie在Web开发中有多种应用场景，包括：</p>
+<ul>
+<li><strong>会话管理</strong>：Cookie常用于存储会话标识符，以便在用户访问不同页面时保持会话状态。</li>
+<li><strong>身份验证</strong>：Cookie可以用于存储用户的身份验证凭证或令牌，以便在用户下次访问时自动登录。</li>
+<li><strong>个性化设置</strong>：Cookie可以用于存储用户的个性化首选项，例如语言偏好、主题设置等。</li>
+<li><strong>追踪和分析</strong>：Cookie可以</li>
+</ul>
+<p>用于追踪用户的行为和进行网站分析，例如记录用户访问的页面、点击的链接等。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 设置Cookie</span><br><span class="hljs-variable language_">document</span>.<span class="hljs-property">cookie</span> = <span class="hljs-string">&quot;username=John Doe; expires=Fri, 31 Dec 2023 23:59:59 GMT; path=/; secure; SameSite=Strict&quot;</span>;<br><br><span class="hljs-comment">// 读取Cookie</span><br><span class="hljs-keyword">const</span> cookies = <span class="hljs-variable language_">document</span>.<span class="hljs-property">cookie</span>.<span class="hljs-title function_">split</span>(<span class="hljs-string">&quot;; &quot;</span>);<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; cookies.<span class="hljs-property">length</span>; i++) &#123;<br>  <span class="hljs-keyword">const</span> cookie = cookies[i].<span class="hljs-title function_">split</span>(<span class="hljs-string">&quot;=&quot;</span>);<br>  <span class="hljs-keyword">const</span> name = cookie[<span class="hljs-number">0</span>];<br>  <span class="hljs-keyword">const</span> value = cookie[<span class="hljs-number">1</span>];<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(name + <span class="hljs-string">&quot;: &quot;</span> + value);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-什么是Session？"><a href="#2-什么是Session？" class="headerlink" title="2. 什么是Session？"></a>2. 什么是Session？</h2><h3 id="属性-1"><a href="#属性-1" class="headerlink" title="属性"></a>属性</h3><p>Session是一种在服务器端存储和跟踪用户会话状态的机制。Session具有以下属性：</p>
+<ul>
+<li><strong>存储位置</strong>：Session数据存储在服务器端的内存或持久化介质中，而不是存储在客户端。</li>
+<li><strong>会话ID</strong>：每个会话都有一个唯一的会话ID，用于标识该会话。会话ID通常通过Cookie或URL参数发送给客户端，并在后续请求中用于识别会话。</li>
+<li><strong>过期时间</strong>：Session可以设置过期时间，以控制会话的有效期。过期时间可以是一个具体的日期和时间，也可以是一个从会话创建时开始的时间段。</li>
+<li><strong>安全性</strong>：Session的会话ID需要进行保护，以防止会话劫持和其他安全问题。</li>
+</ul>
+<h3 id="应用场景-1"><a href="#应用场景-1" class="headerlink" title="应用场景"></a>应用场景</h3><p>Session在Web开发中有多种应用场景，包括：</p>
+<ul>
+<li><strong>用户身份验证</strong>：Session用于存储用户的身份验证状态，以便在用户访问需要验证的资源时进行验证。</li>
+<li><strong>购物车</strong>：Session用于存储用户的购物车内容，以便在用户进行结账或继续购物时保持购物车状态。</li>
+<li><strong>个性化设置</strong>：Session可以用于存储用户的个性化首选项，例如语言偏好、主题设置等。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;express&quot;</span>);<br><span class="hljs-keyword">const</span> session = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;express-session&quot;</span>);<br><br><span class="hljs-keyword">const</span> app = <span class="hljs-title function_">express</span>();<br><br>app.<span class="hljs-title function_">use</span>(<span class="hljs-title function_">session</span>(&#123;<br>  <span class="hljs-attr">secret</span>: <span class="hljs-string">&quot;mysecret&quot;</span>,<br>  <span class="hljs-attr">resave</span>: <span class="hljs-literal">false</span>,<br>  <span class="hljs-attr">saveUninitialized</span>: <span class="hljs-literal">true</span>,<br>  <span class="hljs-attr">cookie</span>: &#123; <span class="hljs-attr">secure</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">sameSite</span>: <span class="hljs-string">&quot;strict&quot;</span>, <span class="hljs-attr">httpOnly</span>: <span class="hljs-literal">true</span> &#125;<br>&#125;));<br><br>app.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;/&quot;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> &#123;<br>  req.<span class="hljs-property">session</span>.<span class="hljs-property">username</span> = <span class="hljs-string">&quot;John Doe&quot;</span>;<br>  res.<span class="hljs-title function_">send</span>(<span class="hljs-string">&quot;Session is set.&quot;</span>);<br>&#125;);<br><br>app.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;/profile&quot;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> &#123;<br>  <span class="hljs-keyword">const</span> username = req.<span class="hljs-property">session</span>.<span class="hljs-property">username</span>;<br>  res.<span class="hljs-title function_">send</span>(<span class="hljs-string">&quot;Welcome, &quot;</span> + username);<br>&#125;);<br><br>app.<span class="hljs-title function_">listen</span>(<span class="hljs-number">3000</span>, <span class="hljs-function">() =&gt;</span> &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Server is running on port 3000&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<h2 id="3-什么是SessionStorage？"><a href="#3-什么是SessionStorage？" class="headerlink" title="3. 什么是SessionStorage？"></a>3. 什么是SessionStorage？</h2><h3 id="属性-2"><a href="#属性-2" class="headerlink" title="属性"></a>属性</h3><p>SessionStorage是一种在客户端存储临时数据的机制。SessionStorage具有以下属性：</p>
+<ul>
+<li><strong>存储位置</strong>：SessionStorage数据存储在客户端的内存中，与当前会话关联。</li>
+<li><strong>会话范围</strong>：SessionStorage数据仅在浏览器会话期间保留，当用户关闭标签页或浏览器时数据将被清除。</li>
+<li><strong>域和协议限制</strong>：SessionStorage数据只能在同一域和协议下访问。</li>
+</ul>
+<h3 id="应用场景-2"><a href="#应用场景-2" class="headerlink" title="#应用场景"></a><a target="_blank" rel="noopener" href="https://www.coding-time.cn/js/advance/%E8%AF%A6%E8%A7%A3%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8.html#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-2">#</a>应用场景</h3><p>SessionStorage在Web开发中有多种应用场景，包括：</p>
+<ul>
+<li><strong>临时数据存储</strong>：SessionStorage可用于在页面之间传递临时数据，例如表单数据、临时状态等。</li>
+<li><strong>表单数据保存</strong>：SessionStorage可用于保存用户填写的表单数据，以便在刷新页面或返回页面时恢复数据，防止数据丢失。</li>
+<li><strong>单页应用状态管理</strong>：在单页应用中，可以使用SessionStorage来存储和管理应用的状态，例如当前选中的标签、展开&#x2F;收起的面板等。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 设置SessionStorage</span><br>sessionStorage.<span class="hljs-title function_">setItem</span>(<span class="hljs-string">&quot;username&quot;</span>, <span class="hljs-string">&quot;John Doe&quot;</span>);<br><br><span class="hljs-comment">// 读取SessionStorage</span><br><span class="hljs-keyword">const</span> username = sessionStorage.<span class="hljs-title function_">getItem</span>(<span class="hljs-string">&quot;username&quot;</span>);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(username);<br></code></pre></td></tr></table></figure>
+
+<h2 id="4-什么是LocalStorage？"><a href="#4-什么是LocalStorage？" class="headerlink" title="4. 什么是LocalStorage？"></a>4. 什么是LocalStorage？</h2><h3 id="属性-3"><a href="#属性-3" class="headerlink" title="属性"></a>属性</h3><p>LocalStorage是一种在客户端存储持久性数据的机制。LocalStorage具有以下属性：</p>
+<ul>
+<li><strong>存储位置</strong>：LocalStorage数据存储在客户端的持久化介质中，与浏览器相关联。</li>
+<li><strong>持久性</strong>：LocalStorage数据不受会话结束或浏览器关闭的影响，会一直保留在浏览器中，除非被显式删除。</li>
+<li><strong>域和协议限制</strong>：LocalStorage数据只能在同一域和协议下访问。</li>
+</ul>
+<h3 id="应用场景-3"><a href="#应用场景-3" class="headerlink" title="应用场景"></a>应用场景</h3><p>LocalStorage在Web开发中有多种应用场景，包括：</p>
+<ul>
+<li><strong>本地数据存储</strong>：LocalStorage可用于在客户端存储持久性数据，如用户首选项、缓存的数据等。</li>
+<li><strong>离线应用</strong>：LocalStorage可用于存储离线应用所需的资源，例如HTML、CSS和JavaScript文件，以实现离线访问能力。</li>
+<li><strong>单页应用状态管理</strong>：在单页应用中，可以使用LocalStorage来存储和管理应用的状态，例如当前选中的标签、展开&#x2F;收起的面板等。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 设置LocalStorage</span><br><span class="hljs-variable language_">localStorage</span>.<span class="hljs-title function_">setItem</span>(<span class="hljs-string">&quot;username&quot;</span>, <span class="hljs-string">&quot;John Doe&quot;</span>);<br><br><span class="hljs-comment">// 读取LocalStorage</span><br><span class="hljs-keyword">const</span> username = <span class="hljs-variable language_">localStorage</span>.<span class="hljs-title function_">getItem</span>(<span class="hljs-string">&quot;username&quot;</span>);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(username);<br></code></pre></td></tr></table></figure>
+
+<h2 id="5-Cookie-vs-Session-vs-SessionStorage-vs-LocalStorage"><a href="#5-Cookie-vs-Session-vs-SessionStorage-vs-LocalStorage" class="headerlink" title="5. Cookie vs. Session vs. SessionStorage vs. LocalStorage"></a>5. Cookie vs. Session vs. SessionStorage vs. LocalStorage</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>属性</th>
+<th>存储位置</th>
+<th>生命周期</th>
+<th>安全性</th>
+<th>大小限制</th>
+<th>跨域限制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cookie</td>
+<td>键值对</td>
+<td>客户端</td>
+<td>可配置</td>
+<td>受同源策略限制</td>
+<td>约4KB</td>
+<td>是</td>
+</tr>
+<tr>
+<td>Session</td>
+<td>会话ID和服务器端存储</td>
+<td>服务器端</td>
+<td>可配置</td>
+<td>较高（会话ID保护）</td>
+<td>无</td>
+<td>否</td>
+</tr>
+<tr>
+<td>SessionStorage</td>
+<td>键值对</td>
+<td>客户端</td>
+<td>浏览器会话期间</td>
+<td>同源</td>
+<td>约5MB</td>
+<td>否</td>
+</tr>
+<tr>
+<td>LocalStorage</td>
+<td>键值对</td>
+<td>客户端</td>
+<td>永久（需显式删除）</td>
+<td>同源</td>
+<td>约5MB</td>
+<td>否</td>
+</tr>
+</tbody></table>
+<p>Cookie、Session、SessionStorage和LocalStorage都是常见的Web存储解决方案，每种方案都有其适用的场景和特点。</p>
+<ul>
+<li>使用Cookie可以在客户端存储数据，适用于存储会话标识符、用户首选项和追踪用户行为等场景。</li>
+<li>Session用于在服务器端存储和管理用户的会话状态，适用于身份验证、购物车和个性化设置等场景。</li>
+<li>SessionStorage用于在浏览器会话期间存储临时数据，适用于传递数据、保存表单数据和单页应用状态管理等场景。</li>
+<li>LocalStorage用于在客户端存储持久性数据，适用于本地数据存储、离线应用和单页应用状态管理等场景。</li>
+</ul>
+<p>根据具体的需求和场景，选择合适的存储方案可以更好地管理和使用数据。</p>
+<h1 id="前端跨页面通信"><a href="#前端跨页面通信" class="headerlink" title="前端跨页面通信"></a>前端跨页面通信</h1><h3 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h3><p>Cookie是一种在浏览器中存储数据的机制，可以通过设置Cookie的值在不同页面之间传递数据。通过设置相同的Cookie名称和值，不同的页面可以读取和修改Cookie的值，实现跨页面数据的传递和共享。</p>
+<p>使用Cookie进行跨页面通信的示例代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 在页面 A 中设置 Cookie</span><br><span class="hljs-variable language_">document</span>.<span class="hljs-property">cookie</span> = <span class="hljs-string">&quot;data=example&quot;</span>;<br><br><span class="hljs-comment">// 在页面 B 中读取 Cookie</span><br><span class="hljs-keyword">const</span> cookies = <span class="hljs-variable language_">document</span>.<span class="hljs-property">cookie</span>.<span class="hljs-title function_">split</span>(<span class="hljs-string">&quot;; &quot;</span>);<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; cookies.<span class="hljs-property">length</span>; i++) &#123;<br>  <span class="hljs-keyword">const</span> [name, value] = cookies[i].<span class="hljs-title function_">split</span>(<span class="hljs-string">&quot;=&quot;</span>);<br>  <span class="hljs-keyword">if</span> (name === <span class="hljs-string">&quot;data&quot;</span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(value); <span class="hljs-comment">// 输出 &quot;example&quot;</span><br>    <span class="hljs-keyword">break</span>;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="LocalStorage-和-SessionStorage"><a href="#LocalStorage-和-SessionStorage" class="headerlink" title="LocalStorage 和 SessionStorage"></a>LocalStorage 和 SessionStorage</h3><p>LocalStorage和SessionStorage是浏览器提供的本地存储机制，可以在不同页面之间存储和读取数据。它们的区别在于数据的生命周期，LocalStorage中的数据在浏览器关闭后仍然保留，而SessionStorage中的数据在会话结束后被清除。</p>
+<p>使用LocalStorage进行跨页面通信的示例代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 在页面 A 中存储数据到 LocalStorage</span><br><span class="hljs-variable language_">localStorage</span>.<span class="hljs-title function_">setItem</span>(<span class="hljs-string">&quot;data&quot;</span>, <span class="hljs-string">&quot;example&quot;</span>);<br><br><span class="hljs-comment">// 在页面 B 中读取 LocalStorage 的数据</span><br><span class="hljs-keyword">const</span> data = <span class="hljs-variable language_">localStorage</span>.<span class="hljs-title function_">getItem</span>(<span class="hljs-string">&quot;data&quot;</span>);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data); <span class="hljs-comment">// 输出 &quot;example&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="Broadcast-Channel"><a href="#Broadcast-Channel" class="headerlink" title="Broadcast Channel"></a>Broadcast Channel</h3><p>Broadcast Channel是浏览器提供的API，用于在不同页面之间进行消息广播和接收。通过Broadcast Channel，我们可以创建一个频道，并在不同的页面之间发送和接收消息。</p>
+<p>使用Broadcast Channel进行跨页面通信的示例代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 在页面 A 中创建 Broadcast Channel</span><br><span class="hljs-keyword">const</span> channel = <span class="hljs-keyword">new</span> <span class="hljs-title class_">BroadcastChannel</span>(<span class="hljs-string">&quot;myChannel&quot;</span>);<br><br><span class="hljs-comment">// 在页面 B 中监听消息</span><br>channel.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;message&quot;</span>, <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(event.<span class="hljs-property">data</span>); <span class="hljs-comment">// 输出接收到的消息</span><br>&#125;);<br><br><span class="hljs-comment">// 在页面 A 中发送消息</span><br>channel.<span class="hljs-title function_">postMessage</span>(<span class="hljs-string">&quot;Hello from Page A&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<h3 id="Window-postMessage"><a href="#Window-postMessage" class="headerlink" title="Window.postMessage"></a>Window.postMessage</h3><p>Window.postMessage是浏览器提供的API，用于在不同窗口或框架之间进行安全的跨页面通信。通过Window.postMessage，我们可以向其他窗口发送消息，并接收其他窗口发送的消息。</p>
+<p>使用Window.postMessage进行跨页面通信的示例代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 在页面 A 中发送消息给页面 B</span><br><span class="hljs-variable language_">window</span>.<span class="hljs-property">opener</span>.<span class="hljs-title function_">postMessage</span>(<span class="hljs-string">&quot;Hello from Page A&quot;</span>, <span class="hljs-string">&quot;https://www.example.com&quot;</span>);<br><br><span class="hljs-comment">// 在页面 B 中监听消息</span><br><span class="hljs-variable language_">window</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;message&quot;</span>, <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> &#123;<br>  <span class="hljs-keyword">if</span> (event.<span class="hljs-property">origin</span> === <span class="hljs-string">&quot;https://www.example.com&quot;</span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(event.<span class="hljs-property">data</span>); <span class="hljs-comment">// 输出接收到的消息</span><br>  &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%89%8D%E7%AB%AF/">#前端</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>前端学习</div>
+      <div>https://xiehongchen.github.io/2024/02/20/前端学习/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>XieHongchen</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年2月20日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/02/20/js%E5%AD%A6%E4%B9%A0/" title="js学习">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">js学习</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/02/20/%E6%B5%8F%E8%A7%88%E5%99%A8/" title="浏览器">
+                        <span class="hidden-mobile">浏览器</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
